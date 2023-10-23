@@ -27,6 +27,11 @@ model_id = 'gpt2'
 model = AutoModelForCausalLM.from_pretrained(model_id)
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 
+# Excluir la cuantización de las capas de embeddings
+for name, module in model.named_modules():
+    if 'embedding' in name:
+        module.qconfig = None
+
 # Cuantizar el modelo
 quantized_model = quantize_model(model)
 
