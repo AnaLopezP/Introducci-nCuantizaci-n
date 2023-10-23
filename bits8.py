@@ -1,5 +1,7 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
+import numpy as np
+from copy import deepcopy
 
 def absmax_quantize(X):
 
@@ -102,17 +104,13 @@ print(weights_abs_quant)
 
  
 
-# Quantize layer using absmax quantization
+# Quantize layer using zeropoint quantization
 
 weights_zp_quant, _ = zeropoint_quantize(weights)
 
 print("\nZero-point quantized weights:")
 
 print(weights_zp_quant)
-
-import numpy as np
-
-from copy import deepcopy
 
 # Store original weights
 
