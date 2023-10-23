@@ -1,13 +1,14 @@
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from bits8 import model_id, generate_text, calculate_perplexity, original_text, weights, ppl
+from bits8 import *
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import numpy as np
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
- 
+model_id = 'gpt2'
+#model_id, generate_text, calculate_perplexity, original_text, weights, ppl
 
 model_int8 = AutoModelForCausalLM.from_pretrained(model_id,
 
