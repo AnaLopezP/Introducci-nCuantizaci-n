@@ -1,1 +1,2 @@
-# Introducci-nCuantizaci-n
+# Introduccion a la cuantizacion
+https://github.com/AnaLopezP/IntroduccionCuantizacion
