@@ -180,7 +180,7 @@ plt.style.use('ggplot')
 
 # Create figure and axes
 
-fig, axs = plt.subplots(2, figsize=(10,10), dpi=300, sharex=True)
+fig, axs = plt.subplots(2, figsize=(5,5), dpi=300, sharex=True)
 
  
 
@@ -218,17 +218,17 @@ axs[1].legend()
 
 # Add title and labels
 
-axs[0].set_title('Comparison of Original and Absmax Quantized Weights', fontsize=16)
+axs[0].set_title('Comparison of Original and Absmax Quantized Weights', fontsize=10)
 
-axs[1].set_title('Comparison of Original and Zeropoint Quantized Weights', fontsize=16)
+axs[1].set_title('Comparison of Original and Zeropoint Quantized Weights', fontsize=10)
 
  
 
 for ax in axs:
 
-    ax.set_xlabel('Weights', fontsize=14)
+    ax.set_xlabel('Weights', fontsize=10)
 
-    ax.set_ylabel('Count', fontsize=14)
+    ax.set_ylabel('Count', fontsize=10)
 
     ax.yaxis.set_major_formatter(ticker.EngFormatter()) # Make y-ticks more human readable
 
